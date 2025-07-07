@@ -11,10 +11,8 @@ public class Q26Server {
     private ServerSocket ss = null;
     private DataInputStream in = null;
 
-    // Constructor with port
     public Q26Server(int port) {
 
-        // Starts server and waits for a connection
         try {
             ss = new ServerSocket(port);
             System.out.println("Server started");
@@ -42,7 +40,6 @@ public class Q26Server {
             }
             System.out.println("Closing connection");
 
-            // Close connection
             s.close();
             in.close();
         } catch (IOException i) {
